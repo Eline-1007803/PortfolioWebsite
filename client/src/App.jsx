@@ -10,7 +10,7 @@ function App() {
             <div>
                 <NavigationBar/>
             </div>
-            <div>
+            <div className="d-flex align-items-center justify-content-center">
                 <StartPage/>
             </div>
         </div>
