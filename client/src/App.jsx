@@ -1,47 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavigationBar from "./components/NavigationBar.jsx";
+import startPage from "./components/StartPage.jsx";
+import StartPage from "./components/StartPage.jsx";
 
 function App() {
-  const [message, setMessage] = useState({});
-
-  async function callHelloApi(){
-      try {
-          const response = await fetch("http://localhost:3000/api/hello");
-          if (!response.ok) {
-              throw new Error(`HTTP error: ${response.status}`);
-          }
-          const data = await response.json();
-          setMessage(data);
-          console.log(data);
-      } catch(error) {
-          console.error("Error message: ", error);
-      }
-  }
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-        <div className="card">
-            <button onClick={() => callHelloApi()}>Call Hello API</button>
-            <p>
-                Edit <code>src/App.jsx</code> and save to test HMR
-            </p>
+    return (
+        <div>
+            <div>
+                <NavigationBar/>
+            </div>
+            <div>
+                <StartPage/>
+            </div>
         </div>
-        <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+    )
 }
 
 export default App
