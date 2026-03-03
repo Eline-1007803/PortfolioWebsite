@@ -5,6 +5,7 @@ import StartPage from "./components/StartPage.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx"
 import Bg from "./assets/pink-bg.jpg"
+import CarouselSize from "./components/Carousel.jsx"
 
 function App() {
      const styles = {
