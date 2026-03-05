@@ -5,7 +5,6 @@ import StartPage from "./components/StartPage.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx"
 import Bg from "./assets/pink-bg.jpg"
-import CarouselSize from "./components/Carousel.jsx"
 
 function App() {
      const styles = {
@@ -17,20 +16,25 @@ function App() {
             height: '800px'
         };
     return (
-        <div>
             <div>
                 <NavigationBar/>
                 <div className="d-flex align-items-center justify-content-center" style={styles}>
                     <StartPage/>
                 </div>
-                <About/>
                 <div>
-                <Contact/>
+                    <About/>
                 </div>
-            </div>
-        </div>
+                <div>
+                    <Contact/>
+                </div>
 
-)
+
+
+            </div>
+
+
+
+    )
 }
 
 
